@@ -20,7 +20,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home:
         Scaffold(
-          appBar: AppBar(),
+          appBar: AppBar(
+            title: Text('앱 이름')
+          ),
           body: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly ,      //css의 display : flex와 유사
             // crossAxisAlignment: CrossAxisAlignment.center,       상하 정렬
@@ -30,7 +32,17 @@ class MyApp extends StatelessWidget {
               Icon(Icons.star)
             ]
           ),
-          bottomNavigationBar: BottomAppBar()
+          bottomNavigationBar: BottomAppBar(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Icon(Icons.phone),
+                  Icon(Icons.message),
+                  Icon(Icons.contact_page),
+                ],
+              )
+          )
+
 
         )
     );
